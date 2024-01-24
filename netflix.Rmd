@@ -202,7 +202,13 @@ for (movie_title in imdb_list$Title) {
 
   # 抓取指定的資訊
   tryCatch({
-    info_element <- remDr$findElement(using = "xpath", '//*[@id="__next"]/main/div/section[1]/div/section/div/div[1]')
+    webpage<-read_html(remDr$getPageSource()[[1]])
+    info_element <-html_nodes(webpage,"[data-testid='title-details-section']")
+  
+  #開始抓各個資訊
+    release_date_text <- html_nodes(info_element, "[data-testid='title-details-releasedate'] a") %>% html_text() %>% .[2]
+    country <- html_nodes(info_element, "[data-testid='title-details-origin'] a") %>% html_text()
+    
     info_text <- info_element$getElementText()
   }, error = function(e) {
     message("Error fetching information:", conditionMessage(e))
