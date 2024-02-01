@@ -1,7 +1,7 @@
 #netflix_engagement
 READr專題使用資料
 
-* netflix_all.csv 我們下載 Netflix 釋出的收視報告，並在串流數據調查網站 flixpatrol 和影視資訊網站 imdb 蒐集電影和影集的基本資訊，包括類別、出品國家、出品日期，共 18214 部影視作品。欄位名稱及內容如下：
+* 以 Netflix 2023 上半年的收視報告（A Netflix Engagement Report）為基礎，並搭配串流數據調查網站 FlixPatrol 和影視資訊網站 IMDb 補充電影和影集的基本資訊，包括類別、出品國家、出品日期等。。欄位名稱及內容如下：
 * 
 |  no.   |  Title   |  Available_Globally   |  Released_Date   |  Views   |  type   |  country   | date  |  genres   |
 |  ----  |  ----  |  ----  |  ----  |  ----  |  ----  |  ----  | ----  | ----  
